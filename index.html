@@ -3,7 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Anim’Up</title>
+<title>Anim’Up · L’appli des animateurs</title>
+<link rel="icon" href="/icone-180.png">
+<link rel="apple-touch-icon" href="/icone-180.png">
 <style>
 :root { --ink: #102F56; --yellow: #FFCB28; --bg: #FBFCFA; --card: #FFFFFF; --muted: #4A5D78; --line: #E3E9F1; }
 @media (prefers-color-scheme: dark) { :root { --ink: #F4F7FB; --bg: #0B1016; --card: #141B24; --muted: #A9B6C8; --line: #253142; } }
@@ -19,16 +21,74 @@ p { margin: 0 0 10px; }
 .card { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 18px 20px; margin: 14px 0; }
 .badge { display: inline-block; background: var(--yellow); color: #102F56; font-weight: 700; border-radius: 999px; padding: 6px 16px; margin: 8px 0 16px; }
 a { color: inherit; }
+/* Accueil : la page vers laquelle renvoient la bio TikTok et Instagram. Toujours claire, comme l’appli. */
+body.home { --ink: #102F56; --bg: #FBFCFA; --card: #FFFFFF; --muted: #4A5D78; --line: #E3E9F1; color-scheme: light; background: radial-gradient(ellipse 120% 60% at 100% 0%, #FFF3C9 0%, var(--bg) 60%); }
+.home main { padding-top: 20px; }
+.home .logo { display: block; width: 150px; height: auto; margin: 0 auto 18px; mix-blend-mode: multiply; }
+.home h1 { font-size: clamp(34px, 9vw, 52px); line-height: 1.05; font-weight: 900; letter-spacing: -0.02em; text-align: center; margin: 0 0 14px; }
+.home h1 mark { background: var(--yellow); color: inherit; padding: 0 0.18em; border-radius: 10px; box-decoration-break: clone; -webkit-box-decoration-break: clone; white-space: nowrap; }
+.home .intro { text-align: center; font-size: 18px; max-width: 520px; margin: 0 auto 22px; }
+.stores { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.store { display: inline-flex; align-items: center; gap: 12px; min-width: 230px; padding: 11px 22px 11px 18px; border-radius: 16px; background: #0B0B0F; color: #FFFFFF; text-decoration: none; box-shadow: 0 8px 20px rgba(16, 47, 86, 0.18); transition: transform 0.15s; }
+.store:active { transform: scale(0.97); }
+.store svg { width: 30px; height: 30px; flex: none; }
+.store span { display: flex; flex-direction: column; line-height: 1.15; text-align: left; }
+.store small { font-size: 12px; opacity: 0.85; }
+.store strong { font-size: 21px; font-weight: 600; letter-spacing: -0.01em; }
+.shots { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; margin: 30px -16px 8px; padding: 6px 16px 18px; scrollbar-width: none; }
+.shots::-webkit-scrollbar { display: none; }
+.shots img { flex: none; width: min(68vw, 270px); height: auto; aspect-ratio: 9 / 16; border-radius: 22px; scroll-snap-align: center; box-shadow: 0 10px 28px rgba(16, 47, 86, 0.16); }
+@media (min-width: 860px) { .home main { max-width: 900px; } .shots { justify-content: center; overflow: visible; margin: 36px 0 8px; } }
+.home h2.big { font-size: 26px; font-weight: 900; text-align: center; margin: 26px 0 6px; }
+.features { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin: 16px 0 8px; }
+.feature { border-radius: 20px; padding: 16px 18px; }
+.feature h3 { font-size: 18px; margin: 0 0 4px; }
+.feature p { margin: 0; color: var(--muted); font-size: 16px; }
+.end { text-align: center; background: var(--ink); color: #FFFFFF; border-radius: 26px; padding: 26px 18px; margin: 28px 0 14px; }
+.end h2 { font-size: 24px; font-weight: 900; margin: 0 0 6px; }
+.end p { color: #D5DEEA; margin: 0 0 18px; }
+.end .store { background: #FFFFFF; color: #0B0B0F; }
 nav { display: flex; flex-wrap: wrap; gap: 10px 18px; justify-content: center; margin-top: 28px; color: var(--muted); font-size: 15px; }
 </style>
+<meta name="description" content="Anim’Up, l’appli des animateurs de centres de loisirs et de colos&nbsp;: petits jeux, grands jeux, chants, activités manuelles et plannings tout prêts. Sur iPhone et Android.">
+<meta name="apple-itunes-app" content="app-id=6825064951">
+<meta property="og:title" content="Anim’Up · L’appli des animateurs">
+<meta property="og:description" content="Anim’Up, l’appli des animateurs de centres de loisirs et de colos&nbsp;: petits jeux, grands jeux, chants, activités manuelles et plannings tout prêts. Sur iPhone et Android.">
+<meta property="og:image" content="https://animup.fr/partage.jpg">
+<meta property="og:url" content="https://animup.fr/">
+<meta name="theme-color" content="#FBFCFA">
 </head>
-<body>
+<body class="home">
 <main>
-<header><a href="/"><img src="logo.png" alt="Anim’Up"></a></header>
-<div style="text-align:center"><h1>Trouve, prépare et organise tes animations</h1>
-<p class="intro">Anim’Up aide les animateurs de centres de loisirs et de colonies : activités, grands jeux, chants, bricolages et plannings prêts à l’emploi.</p>
-<span class="badge">Bientôt disponible sur iPhone et Android</span></div>
-<section class="card"><h2>Contact</h2><p>Une question&nbsp;? Écris-nous à <a href="mailto:contact@animup.fr">contact@animup.fr</a>.</p></section>
+
+<img class="logo" src="logo.webp" alt="Anim’Up, des idées qui te boostent" width="150" height="90">
+<h1>L’appli qui prépare <mark>tes animations.</mark></h1>
+<p class="intro">Pour les animateurs de centres de loisirs et de colos. Tu trouves ton jeu en quelques secondes, avec tout ce qu’il faut pour le lancer.</p>
+<div class="stores">
+<a class="store" data-os="ios" href="https://apps.apple.com/fr/app/animup/id6825064951"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg><span><small>Télécharger dans</small><strong>l’App Store</strong></span></a>
+<a class="store" data-os="android" href="https://play.google.com/store/apps/details?id=fr.animup.app"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00D7FE" d="M3.6 1.8 13.4 12l-9.8 10.2c-.4-.2-.6-.7-.6-1.2V3c0-.5.2-1 .6-1.2z"/><path fill="#FFCE00" d="m16.8 8.6 3.6 2.1c1 .6 1 2 0 2.6l-3.6 2.1L13.4 12z"/><path fill="#00F076" d="M3.6 1.8c.4-.2.9-.2 1.4.1l11.8 6.7L13.4 12z"/><path fill="#FF3A44" d="M13.4 12l3.4 3.4L5 22.1c-.5.3-1 .3-1.4.1z"/></svg><span><small>Disponible sur</small><strong>Google Play</strong></span></a>
+</div>
+<div class="shots">
+<img src="capture-1-accueil.webp" alt="L’accueil d’Anim’Up : petits jeux, grands jeux, chants, activités manuelles, plannings" width="540" height="960">
+<img src="capture-2-recherche.webp" alt="La recherche avec les filtres : âge, nombre d’enfants, lieu, durée" width="540" height="960" loading="lazy">
+<img src="capture-3-grand-jeu.webp" alt="Une fiche de grand jeu prête à lancer" width="540" height="960" loading="lazy">
+</div>
+<h2 class="big">Tout ce qu’il te faut pour animer</h2>
+<div class="features">
+<div class="feature" style="background:#FFF3C9"><h3>Petits jeux et sports</h3><p>Des centaines de jeux, classés par âge, de la petite section aux 8–12 ans.</p></div>
+<div class="feature" style="background:#E4EEFB"><h3>Grands jeux en kit</h3><p>Les règles, la préparation, une fiche par animateur et les supports à imprimer.</p></div>
+<div class="feature" style="background:#E2F5EF"><h3>Chants avec la vidéo</h3><p>Les paroles et la vidéo pour apprendre le chant avant de le lancer.</p></div>
+<div class="feature" style="background:#EFE9FD"><h3>Plannings de la semaine</h3><p>Des semaines à thème jour par jour, ou ton propre planning à imprimer.</p></div>
+<div class="feature" style="background:#FDE7EF"><h3>Trouve-moi une activité</h3><p>Tu donnes l’âge, le nombre d’enfants et le lieu&nbsp;: l’appli choisit pour toi.</p></div>
+<div class="feature" style="background:#FFEBDD"><h3>Activités manuelles</h3><p>Des bricolages expliqués pas à pas, avec les modèles en PDF.</p></div>
+</div>
+<section class="end"><h2>Ta prochaine anim est déjà prête</h2><p>Télécharge Anim’Up sur ton téléphone.</p>
+<div class="stores">
+<a class="store" data-os="ios" href="https://apps.apple.com/fr/app/animup/id6825064951"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg><span><small>Télécharger dans</small><strong>l’App Store</strong></span></a>
+<a class="store" data-os="android" href="https://play.google.com/store/apps/details?id=fr.animup.app"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00D7FE" d="M3.6 1.8 13.4 12l-9.8 10.2c-.4-.2-.6-.7-.6-1.2V3c0-.5.2-1 .6-1.2z"/><path fill="#FFCE00" d="m16.8 8.6 3.6 2.1c1 .6 1 2 0 2.6l-3.6 2.1L13.4 12z"/><path fill="#00F076" d="M3.6 1.8c.4-.2.9-.2 1.4.1l11.8 6.7L13.4 12z"/><path fill="#FF3A44" d="M13.4 12l3.4 3.4L5 22.1c-.5.3-1 .3-1.4.1z"/></svg><span><small>Disponible sur</small><strong>Google Play</strong></span></a>
+</div></section>
+<section class="card"><h2>Contact</h2><p>Une question, une idée de jeu&nbsp;? Écris-nous à <a href="mailto:contact@animup.fr">contact@animup.fr</a>.</p></section>
+<script>if (/android/i.test(navigator.userAgent)) document.querySelectorAll('.stores').forEach(s => s.prepend(s.querySelector('[data-os=android]')));</script>
 <nav><a href="/">Accueil</a><a href="/confidentialite/">Confidentialité</a><a href="/conditions/">Conditions d’utilisation</a><a href="/suppression-compte/">Supprimer mon compte</a></nav>
 </main>
 </body>

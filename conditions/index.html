@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Conditions d’utilisation · Anim’Up</title>
+<link rel="icon" href="/icone-180.png">
+<link rel="apple-touch-icon" href="/icone-180.png">
 <style>
 :root { --ink: #102F56; --yellow: #FFCB28; --bg: #FBFCFA; --card: #FFFFFF; --muted: #4A5D78; --line: #E3E9F1; }
 @media (prefers-color-scheme: dark) { :root { --ink: #F4F7FB; --bg: #0B1016; --card: #141B24; --muted: #A9B6C8; --line: #253142; } }
@@ -19,6 +21,33 @@ p { margin: 0 0 10px; }
 .card { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 18px 20px; margin: 14px 0; }
 .badge { display: inline-block; background: var(--yellow); color: #102F56; font-weight: 700; border-radius: 999px; padding: 6px 16px; margin: 8px 0 16px; }
 a { color: inherit; }
+/* Accueil : la page vers laquelle renvoient la bio TikTok et Instagram. Toujours claire, comme l’appli. */
+body.home { --ink: #102F56; --bg: #FBFCFA; --card: #FFFFFF; --muted: #4A5D78; --line: #E3E9F1; color-scheme: light; background: radial-gradient(ellipse 120% 60% at 100% 0%, #FFF3C9 0%, var(--bg) 60%); }
+.home main { padding-top: 20px; }
+.home .logo { display: block; width: 150px; height: auto; margin: 0 auto 18px; mix-blend-mode: multiply; }
+.home h1 { font-size: clamp(34px, 9vw, 52px); line-height: 1.05; font-weight: 900; letter-spacing: -0.02em; text-align: center; margin: 0 0 14px; }
+.home h1 mark { background: var(--yellow); color: inherit; padding: 0 0.18em; border-radius: 10px; box-decoration-break: clone; -webkit-box-decoration-break: clone; white-space: nowrap; }
+.home .intro { text-align: center; font-size: 18px; max-width: 520px; margin: 0 auto 22px; }
+.stores { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.store { display: inline-flex; align-items: center; gap: 12px; min-width: 230px; padding: 11px 22px 11px 18px; border-radius: 16px; background: #0B0B0F; color: #FFFFFF; text-decoration: none; box-shadow: 0 8px 20px rgba(16, 47, 86, 0.18); transition: transform 0.15s; }
+.store:active { transform: scale(0.97); }
+.store svg { width: 30px; height: 30px; flex: none; }
+.store span { display: flex; flex-direction: column; line-height: 1.15; text-align: left; }
+.store small { font-size: 12px; opacity: 0.85; }
+.store strong { font-size: 21px; font-weight: 600; letter-spacing: -0.01em; }
+.shots { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; margin: 30px -16px 8px; padding: 6px 16px 18px; scrollbar-width: none; }
+.shots::-webkit-scrollbar { display: none; }
+.shots img { flex: none; width: min(68vw, 270px); height: auto; aspect-ratio: 9 / 16; border-radius: 22px; scroll-snap-align: center; box-shadow: 0 10px 28px rgba(16, 47, 86, 0.16); }
+@media (min-width: 860px) { .home main { max-width: 900px; } .shots { justify-content: center; overflow: visible; margin: 36px 0 8px; } }
+.home h2.big { font-size: 26px; font-weight: 900; text-align: center; margin: 26px 0 6px; }
+.features { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin: 16px 0 8px; }
+.feature { border-radius: 20px; padding: 16px 18px; }
+.feature h3 { font-size: 18px; margin: 0 0 4px; }
+.feature p { margin: 0; color: var(--muted); font-size: 16px; }
+.end { text-align: center; background: var(--ink); color: #FFFFFF; border-radius: 26px; padding: 26px 18px; margin: 28px 0 14px; }
+.end h2 { font-size: 24px; font-weight: 900; margin: 0 0 6px; }
+.end p { color: #D5DEEA; margin: 0 0 18px; }
+.end .store { background: #FFFFFF; color: #0B0B0F; }
 nav { display: flex; flex-wrap: wrap; gap: 10px 18px; justify-content: center; margin-top: 28px; color: var(--muted); font-size: 15px; }
 </style>
 </head>
