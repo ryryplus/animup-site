@@ -48,6 +48,8 @@ body.home { --ink: #102F56; --bg: #FBFCFA; --card: #FFFFFF; --muted: #4A5D78; --
 .end h2 { font-size: 24px; font-weight: 900; margin: 0 0 6px; }
 .end p { color: #D5DEEA; margin: 0 0 18px; }
 .end .store { background: #FFFFFF; color: #0B0B0F; }
+.weblink { display: block; box-sizing: border-box; width: 230px; margin: 14px auto 0; padding: 14px 10px; text-align: center; font-size: 16px; white-space: nowrap; border-radius: 16px; border: 2px solid var(--ink); color: var(--ink); font-weight: 700; text-decoration: none; }
+.end .weblink { border-color: #FFFFFF; color: #FFFFFF; }
 nav { display: flex; flex-wrap: wrap; gap: 10px 18px; justify-content: center; margin-top: 28px; color: var(--muted); font-size: 15px; }
 </style>
 <meta name="description" content="Anim’Up, l’appli des animateurs de centres de loisirs et de colos&nbsp;: petits jeux, grands jeux, chants, activités manuelles et plannings tout prêts. Sur iPhone et Android.">
@@ -68,6 +70,7 @@ nav { display: flex; flex-wrap: wrap; gap: 10px 18px; justify-content: center; m
 <a class="store" data-os="ios" href="https://apps.apple.com/fr/app/animup/id6825064951"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg><span><small>Télécharger dans</small><strong>l’App Store</strong></span></a>
 <a class="store" data-os="android" href="https://play.google.com/store/apps/details?id=fr.animup.app"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00D7FE" d="M3.6 1.8 13.4 12l-9.8 10.2c-.4-.2-.6-.7-.6-1.2V3c0-.5.2-1 .6-1.2z"/><path fill="#FFCE00" d="m16.8 8.6 3.6 2.1c1 .6 1 2 0 2.6l-3.6 2.1L13.4 12z"/><path fill="#00F076" d="M3.6 1.8c.4-.2.9-.2 1.4.1l11.8 6.7L13.4 12z"/><path fill="#FF3A44" d="M13.4 12l3.4 3.4L5 22.1c-.5.3-1 .3-1.4.1z"/></svg><span><small>Disponible sur</small><strong>Google Play</strong></span></a>
 </div>
+<a class="weblink" href="/app/">Utiliser Anim’Up sur le web</a>
 <div class="shots">
 <img src="capture-1-accueil.webp" alt="L’accueil d’Anim’Up : petits jeux, grands jeux, chants, activités manuelles, plannings" width="540" height="960">
 <img src="capture-2-recherche.webp" alt="La recherche avec les filtres : âge, nombre d’enfants, lieu, durée" width="540" height="960" loading="lazy">
@@ -86,10 +89,11 @@ nav { display: flex; flex-wrap: wrap; gap: 10px 18px; justify-content: center; m
 <div class="stores">
 <a class="store" data-os="ios" href="https://apps.apple.com/fr/app/animup/id6825064951"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg><span><small>Télécharger dans</small><strong>l’App Store</strong></span></a>
 <a class="store" data-os="android" href="https://play.google.com/store/apps/details?id=fr.animup.app"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00D7FE" d="M3.6 1.8 13.4 12l-9.8 10.2c-.4-.2-.6-.7-.6-1.2V3c0-.5.2-1 .6-1.2z"/><path fill="#FFCE00" d="m16.8 8.6 3.6 2.1c1 .6 1 2 0 2.6l-3.6 2.1L13.4 12z"/><path fill="#00F076" d="M3.6 1.8c.4-.2.9-.2 1.4.1l11.8 6.7L13.4 12z"/><path fill="#FF3A44" d="M13.4 12l3.4 3.4L5 22.1c-.5.3-1 .3-1.4.1z"/></svg><span><small>Disponible sur</small><strong>Google Play</strong></span></a>
-</div></section>
+</div>
+<a class="weblink" href="/app/">Utiliser Anim’Up sur le web</a></section>
 <section class="card"><h2>Contact</h2><p>Une question, une idée de jeu&nbsp;? Écris-nous à <a href="mailto:contact@animup.fr">contact@animup.fr</a>.</p></section>
 <script>if (/android/i.test(navigator.userAgent)) document.querySelectorAll('.stores').forEach(s => s.prepend(s.querySelector('[data-os=android]')));</script>
-<nav><a href="/">Accueil</a><a href="/confidentialite/">Confidentialité</a><a href="/conditions/">Conditions d’utilisation</a><a href="/suppression-compte/">Supprimer mon compte</a></nav>
+<nav><a href="/">Accueil</a><a href="/app/">Version web</a><a href="/confidentialite/">Confidentialité</a><a href="/conditions/">Conditions d’utilisation</a><a href="/suppression-compte/">Supprimer mon compte</a></nav>
 </main>
 </body>
 </html>
