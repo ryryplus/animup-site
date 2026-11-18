@@ -23,7 +23,18 @@
         flex: 1;
       }
     </style>
-  <link rel="icon" href="/app/favicon.ico"/><script defer src="https://cloud.umami.is/script.js" data-website-id="16a198d6-4b96-438f-becd-3a31eb6403be"></script>
+  <link rel="icon" href="/app/favicon.ico"/><script>(function(){var k=["access_token","refresh_token","provider_token","provider_refresh_token","token","token_hash","code","expires_at","expires_in","token_type"];var c=function cleanAuthUrl(value, keys) {
+  if (typeof value !== 'string' || !value) return value;
+  try {
+    const u = new URL(value, 'https://animup.invalid');
+    u.hash = '';
+    for (const key of keys) u.searchParams.delete(key);
+    return u.origin === 'https://animup.invalid' ? u.pathname + u.search : u.toString();
+  } catch {
+    return value.split('#')[0].split('?')[0];
+  }
+};window.animupUmamiClean=function(t,p){if(p){if(p.url)p.url=c(p.url,k);if(p.referrer)p.referrer=c(p.referrer,k);}return p;};})();</script>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="16a198d6-4b96-438f-becd-3a31eb6403be" data-exclude-hash="true" data-before-send="animupUmamiClean"></script>
 </head>
 
   <body>
@@ -33,6 +44,6 @@
     </noscript>
     <!-- The root element for your Expo app. -->
     <div id="root"></div>
-  <script src="/app/_expo/static/js/web/index-16c7df130b054d07057c3fefc76e2117.js" defer></script>
+  <script src="/app/_expo/static/js/web/index-75eb64b5f0ef5260e195dc0c1527a8a4.js" defer></script>
 </body>
 </html>

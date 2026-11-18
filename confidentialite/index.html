@@ -52,7 +52,18 @@ body.home { --ink: #102F56; --bg: #FBFCFA; --card: #FFFFFF; --muted: #4A5D78; --
 .end .weblink { border-color: #FFFFFF; color: #FFFFFF; }
 nav { display: flex; flex-wrap: wrap; gap: 10px 18px; justify-content: center; margin-top: 28px; color: var(--muted); font-size: 15px; }
 </style>
-<script defer src="https://cloud.umami.is/script.js" data-website-id="16a198d6-4b96-438f-becd-3a31eb6403be"></script>
+<script>(function(){var k=["access_token","refresh_token","provider_token","provider_refresh_token","token","token_hash","code","expires_at","expires_in","token_type"];var c=function cleanAuthUrl(value, keys) {
+  if (typeof value !== 'string' || !value) return value;
+  try {
+    const u = new URL(value, 'https://animup.invalid');
+    u.hash = '';
+    for (const key of keys) u.searchParams.delete(key);
+    return u.origin === 'https://animup.invalid' ? u.pathname + u.search : u.toString();
+  } catch {
+    return value.split('#')[0].split('?')[0];
+  }
+};window.animupUmamiClean=function(t,p){if(p){if(p.url)p.url=c(p.url,k);if(p.referrer)p.referrer=c(p.referrer,k);}return p;};})();</script>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="16a198d6-4b96-438f-becd-3a31eb6403be" data-exclude-hash="true" data-before-send="animupUmamiClean"></script>
 </head>
 <body>
 <main>
@@ -63,10 +74,12 @@ nav { display: flex; flex-wrap: wrap; gap: 10px 18px; justify-content: center; m
 <p>Compte&nbsp;: ton adresse e-mail et ton mot de passe (conservé sous forme protégée par notre prestataire d’authentification). Si tu te connectes avec Apple, Google ou Facebook, nous recevons l’identifiant de ce compte, ton e-mail et, selon ton choix, ton nom.</p>
 <p>Profil&nbsp;: ton prénom, ton nom affiché et, si ton fournisseur de connexion en transmet une, l’adresse de ta photo.</p>
 <p>Ton usage&nbsp;: les activités que tu mets en favoris, tes avis «&nbsp;J’ai aimé&nbsp;» ou «&nbsp;Pas trop&nbsp;», les plannings que tu composes, et pour les plannings thématiques, les semaines que tu crées avec leurs points par maison. Si tu prends Premium&nbsp;: la date de début et de fin de ton accès.</p>
+<p>Quelques moments d’utilisation, liés à ton compte&nbsp;: quand tu ouvres l’application, quand tu vois la page Premium, quand tu touches un contenu Premium, quand tu commences ou termines un achat, avec le type d’appareil et la version de l’application. Ils restent chez nous et servent seulement à améliorer Anim’Up.</p>
+<p>Notifications&nbsp;: si tu les acceptes, l’identifiant de notification de ton téléphone, pour t’envoyer de temps en temps une idée d’activité, un rappel ou une offre Premium. Il est envoyé par le service de notifications d’Expo, puis par Apple ou Google. Tu peux les couper à tout moment dans ton profil ou dans les réglages de ton téléphone.</p>
 <p>Tes propositions&nbsp;: les activités que tu nous envoies avec «&nbsp;Propose ton activité&nbsp;», et la photo si tu en joins une.</p>
 <p>Sur ton appareil&nbsp;: ta session de connexion, ton choix de thème clair ou sombre, et un compteur d’ouvertures de l’application qui sert à te proposer de noter l’application.</p></section>
 <section class="card"><h2>Ce que nous ne faisons pas</h2>
-<p>Anim’Up n’affiche pas de publicité, n’utilise pas d’outil de suivi publicitaire ni de statistiques d’usage, ne vend pas tes données et ne les partage pas pour du marketing.</p>
+<p>Anim’Up n’affiche pas de publicité, n’utilise pas d’outil de suivi publicitaire ni d’outil de statistiques extérieur dans l’application, ne vend pas tes données et ne les partage pas pour du marketing.</p>
 <p>L’application est destinée aux adultes. Nous ne collectons aucune donnée sur les enfants que tu encadres&nbsp;: les plannings ne contiennent ni nom ni photo d’enfant.</p></section>
 <section class="card"><h2>Pourquoi nous les utilisons</h2>
 <p>Pour créer et sécuriser ton compte, afficher ton profil, conserver tes favoris et tes plannings, et faire fonctionner l’application. Ces traitements sont nécessaires pour te fournir le service que tu demandes.</p></section>

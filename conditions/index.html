@@ -52,7 +52,18 @@ body.home { --ink: #102F56; --bg: #FBFCFA; --card: #FFFFFF; --muted: #4A5D78; --
 .end .weblink { border-color: #FFFFFF; color: #FFFFFF; }
 nav { display: flex; flex-wrap: wrap; gap: 10px 18px; justify-content: center; margin-top: 28px; color: var(--muted); font-size: 15px; }
 </style>
-<script defer src="https://cloud.umami.is/script.js" data-website-id="16a198d6-4b96-438f-becd-3a31eb6403be"></script>
+<script>(function(){var k=["access_token","refresh_token","provider_token","provider_refresh_token","token","token_hash","code","expires_at","expires_in","token_type"];var c=function cleanAuthUrl(value, keys) {
+  if (typeof value !== 'string' || !value) return value;
+  try {
+    const u = new URL(value, 'https://animup.invalid');
+    u.hash = '';
+    for (const key of keys) u.searchParams.delete(key);
+    return u.origin === 'https://animup.invalid' ? u.pathname + u.search : u.toString();
+  } catch {
+    return value.split('#')[0].split('?')[0];
+  }
+};window.animupUmamiClean=function(t,p){if(p){if(p.url)p.url=c(p.url,k);if(p.referrer)p.referrer=c(p.referrer,k);}return p;};})();</script>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="16a198d6-4b96-438f-becd-3a31eb6403be" data-exclude-hash="true" data-before-send="animupUmamiClean"></script>
 </head>
 <body>
 <main>
