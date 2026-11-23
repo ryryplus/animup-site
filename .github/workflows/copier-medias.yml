@@ -1,0 +1,56 @@
+# Copie les illustrations et les PDF gratuits d'Anim'Up depuis Supabase vers animup.fr/medias/,
+# pour ne plus consommer la bande passante Supabase. À relancer après l'ajout de nouvelles images
+# (mettre à jour les listes medias/liste-*.txt avant). Les PDF Premium restent sur Supabase.
+name: Copier les medias depuis Supabase
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/copier-medias.yml'
+      - 'medias/liste-*.txt'
+
+permissions:
+  contents: write
+
+jobs:
+  copier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Outils
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq imagemagick
+      - name: Télécharger
+        env:
+          BASE: https://hhqkyzpizssbeoxehurt.supabase.co/storage/v1/object/public
+        run: |
+          set -euo pipefail
+          fetch() { # $1 = bucket, $2 = chemin
+            local out="medias/$1/$2"
+            [ -s "$out" ] && return 0
+            mkdir -p "$(dirname "$out")"
+            curl -fsSL --retry 4 --retry-delay 3 -o "$out" "$BASE/$1/$2"
+          }
+          while IFS= read -r p; do [ -n "$p" ] && fetch activity-illustrations "$p"; done < medias/liste-illustrations.txt
+          while IFS= read -r p; do [ -n "$p" ] && fetch activity-resources "$p"; done < medias/liste-pdf-gratuits.txt
+          echo "Illustrations : $(find medias/activity-illustrations -type f | wc -l) / $(grep -c . medias/liste-illustrations.txt)"
+          echo "PDF gratuits : $(find medias/activity-resources -type f | wc -l) / $(grep -c . medias/liste-pdf-gratuits.txt)"
+      - name: Vignettes 360 px (comme Supabase width=360, qualité 70)
+        run: |
+          set -euo pipefail
+          while IFS= read -r p; do
+            case "$p" in ''|ui/*|advice/*|plannings/*|planning-frames/*) continue;; esac
+            out="medias/vignettes/$p"
+            [ -s "$out" ] && continue
+            mkdir -p "$(dirname "$out")"
+            convert "medias/activity-illustrations/$p" -resize '360x>' -strip -quality 70 "$out"
+          done < medias/liste-illustrations.txt
+          du -sh medias/*
+      - name: Enregistrer
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add medias
+          git diff --cached --quiet && echo "Rien de nouveau" && exit 0
+          git commit -m "Medias copiés depuis Supabase"
+          git push
