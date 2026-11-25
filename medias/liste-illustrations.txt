@@ -22,6 +22,7 @@ balle-au-roi.jpg
 balle-aux-bases.jpg
 balle-aux-chasseurs-simplifiee.jpg
 balle-aux-chasseurs.jpg
+balle-aux-lions.jpg
 ballon-brulant-tres-simplifie.jpg
 ballon-brulant.jpg
 ballon-chronometre.jpg
