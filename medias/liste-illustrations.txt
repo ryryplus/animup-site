@@ -33,6 +33,7 @@ battle-de-mouvements.jpg
 beret-ballon-da-v2.jpg
 beret-da-v2.jpg
 beret-simplifie.jpg
+beret-soleil.jpg
 beret.jpg
 bonhomme-de-neige-en-assiette.jpg
 bowling.jpg
@@ -66,6 +67,7 @@ classiques-20261018/les-chaises-musicales.jpg
 classiques-20261018/pigeon-vole.jpg
 classiques-20261018/quelle-heure-est-il-monsieur-le-loup.jpg
 classiques-20261018/zip-zap-boing.jpg
+conquete-des-planetes.jpg
 couronne-de-noel-mains.jpg
 course-a-trois-jambes-da-v2.jpg
 course-a-trois-jambes.jpg
