@@ -170,6 +170,7 @@ le-carre-magique.jpg
 le-cercle-infernal.jpg
 le-chrono-explosif.jpg
 le-defi-des-couleurs.jpg
+le-duel-chifoumi.jpg
 le-facteur-sportif.jpg
 le-festival-des-compagnies.jpg
 le-gardien-du-tresor.jpg
