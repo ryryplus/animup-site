@@ -520,3 +520,4 @@ volley-assis.jpg
 volley-ballon-geant.jpg
 volley-serviette.jpg
 yoga-dynamique-enfants.jpg
+ui/sorties.png
