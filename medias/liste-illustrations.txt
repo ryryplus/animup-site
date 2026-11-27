@@ -521,3 +521,8 @@ volley-ballon-geant.jpg
 volley-serviette.jpg
 yoga-dynamique-enfants.jpg
 ui/sorties.png
+ui/boite-a-outils.png
+ui/outil-minuteur.png
+ui/outil-tirage.png
+ui/outil-equipes.png
+ui/outil-points.png
